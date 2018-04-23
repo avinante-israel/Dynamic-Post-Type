@@ -10,8 +10,8 @@ In *class.post.php* under ```custom_post_types()``` function, declare an array o
 
 ```
 $your_post_type = array(
-		'name'				=> 'your_post_type',
-		'slug'				=> 'your_post_types',
+		'name'			=> 'your_post_type',
+		'slug'			=> 'your_post_types',
 		'singular_name'		=> 'Your Post Type',
 		'plural_name'		=> 'Your Post Types'
 	);
@@ -36,13 +36,13 @@ In *class.post.php* under ```post_meta_fields()``` function, declare an array of
 
 ```
 $your_custom_field = array(
-		'post_slug'		=> 'your_post_type',
+		'post_slug'	=> 'your_post_type',
 		'field_name'	=> 'your_custom_field',
 		'field_type'	=> 'text',
 		'field_meta'	=> array(
-			'label'		=> 'Username',
-			'name'		=> 'name',
-			'class'		=> 'form-control',
+			'label'	=> 'Username',
+			'name'	=> 'name',
+			'class'	=> 'form-control',
 	);
 ```
 
