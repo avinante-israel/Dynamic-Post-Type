@@ -8,23 +8,23 @@ class PostType {
 	}
 
 	public function custom_post_types() {
-		$services = array(
-			'name'				=> 'service',
-			'slug'				=> 'services',
-			'singular_name'		=> 'Service',
-			'plural_name'		=> 'Services'
+		$teams = array(
+			'name'				=> 'team',
+			'slug'				=> 'teams',
+			'singular_name'		=> 'Team',
+			'plural_name'		=> 'Teams'
 		);
 
-		$pricings = array(
-			'name'				=> 'pricing',
-			'slug'				=> 'pricings',
-			'singular_name'		=> 'Pricing',
-			'plural_name'		=> 'Pricings'
+		$potatoes = array(
+			'name'				=> 'potato',
+			'slug'				=> 'potatoes',
+			'singular_name'		=> 'Potato',
+			'plural_name'		=> 'Potatoes'
 		);
 
-		$args = array( $services, $pricings );
+		$post_types = array( $teams, $potatoes );
 
-		return $args;
+		return $post_types;
 	}
 
 	public function custom_post_type_slug() {
@@ -35,126 +35,31 @@ class PostType {
 	}
 
 	public function post_meta_fields() {
-		$fontawesome = array(
-			'post_slug'		=> 'services',
-			'field_name'	=> 'fontawesome',
+		$username = array(
+			'post_slug'		=> 'teams',
+			'field_name'	=> 'member_username',
 			'field_type'	=> 'text',
 			'field_meta'	=> array(
-				'label'		=> 'Font Awesome',
-				'name'		=> 'fontawesome',
+				'label'		=> 'Username',
+				'name'		=> 'name',
 				'class'		=> 'form-control',
-				'rows'		=> ''
 			)
 		);
 
-		$subheader = array(
-			'post_slug'		=> 'pricings',
-			'field_name'	=> 'subheader',
-			'field_type'	=> 'textarea',
-			'field_meta'	=> array(
-				'label'		=> 'Sub Header',
-				'name'		=> 'subheader',
-				'class'		=> 'form-control',
-				'rows'		=> 3
-			)
-		);
-
-		$weekly = array(
-			'post_slug'		=> 'pricings',
-			'field_name'	=> 'weekly',
+		$email = array(
+			'post_slug'		=> 'teams',
+			'field_name'	=> 'member_email',
 			'field_type'	=> 'text',
 			'field_meta'	=> array(
-				'label'		=> 'Hours per Week',
-				'name'		=> 'weekly',
+				'label'		=> 'Email',
+				'name'		=> 'email',
 				'class'		=> 'form-control',
 			)
 		);
 
-		$blog_posting = array(
-			'post_slug'		=> 'pricings',
-			'field_name'	=> 'blog_posting',
-			'field_type'	=> 'select',
-			'field_meta'	=> array(
-				'label'		=> 'Blog Posting',
-				'name'		=> 'blog_posting',
-				'class'		=> 'form-control',
-				'options'	=> array( 'Yes', 'No' )
-			)
-		);
+		$post_fields = array( $username, $email );
 
-		$data_entry = array(
-			'post_slug'		=> 'pricings',
-			'field_name'	=> 'data_entry',
-			'field_type'	=> 'select',
-			'field_meta'	=> array(
-				'label'		=> 'Data Entry',
-				'name'		=> 'data_entry',
-				'class'		=> 'form-control',
-				'options'	=> array( 'Yes', 'No' )
-			)
-		);
-
-		$ecommerce = array(
-			'post_slug'		=> 'pricings',
-			'field_name'	=> 'ecommerce',
-			'field_type'	=> 'select',
-			'field_meta'	=> array(
-				'label'		=> 'E-commerce Development',
-				'name'		=> 'ecommerce',
-				'class'		=> 'form-control',
-				'options'	=> array( 'Yes', 'No' )
-			)
-		);
-
-		$server = array(
-			'post_slug'		=> 'pricings',
-			'field_name'	=> 'server',
-			'field_type'	=> 'select',
-			'field_meta'	=> array(
-				'label'		=> 'Server Management',
-				'name'		=> 'server',
-				'class'		=> 'form-control',
-				'options'	=> array( 'Yes', 'No' )
-			)
-		);
-
-		$templating = array(
-			'post_slug'		=> 'pricings',
-			'field_name'	=> 'templating',
-			'field_type'	=> 'select',
-			'field_meta'	=> array(
-				'label'		=> 'Templating',
-				'name'		=> 'templating',
-				'class'		=> 'form-control',
-				'options'	=> array( 'Yes', 'No' )
-			)
-		);
-
-		$wpdev = array(
-			'post_slug'		=> 'pricings',
-			'field_name'	=> 'wpdev',
-			'field_type'	=> 'select',
-			'field_meta'	=> array(
-				'label'		=> 'WordPress Development',
-				'name'		=> 'wpdev',
-				'class'		=> 'form-control',
-				'options'	=> array( 'Yes', 'No' )
-			)
-		);
-
-		$args = array( 
-			$fontawesome,
-			$subheader,
-			$weekly,
-			$templating,
-			$wpdev,
-			$data_entry,
-			$blog_posting,
-			$server,
-			$ecommerce,
-		);
-
-		return $args;
+		return $post_fields;
 	}
 
 }
