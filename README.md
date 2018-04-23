@@ -49,7 +49,7 @@ $your_custom_field = array(
 Include your custom field in ```$post_fields``` array
 
 ```
-$post_types = array( $your_custom_field, $your_other_custom_field, $another_custom_field );
+$post_fields = array( $your_custom_field, $your_other_custom_field, $another_custom_field );
 ```
 
 # Notes
