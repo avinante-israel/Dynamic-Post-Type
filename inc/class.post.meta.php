@@ -54,8 +54,6 @@ class PostMeta extends PostType {
 	public function update_meta_values() {
 		global $post;
 
-		?><table>
-			<tbody><?php
 		if( is_array( $this->post_fields ) && ! empty( $this->post_fields ) ) :
 			foreach( $this->post_fields as $index => $value ) :
 				$post_type_data = get_post_type_object( get_post_type() ); // Something something from stackoverflow
@@ -67,9 +65,6 @@ class PostMeta extends PostType {
 				endif;
 			endforeach;
 		endif;
-				
-			?></tbody>
-		</table><?php
 	}
 
 }
